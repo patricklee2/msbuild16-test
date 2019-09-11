@@ -50,6 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- msbuild 15 does not create directory-->
   <Target Name="WriteLaunchers" AfterTargets="CopyFilesToOutputDirectory">
       <WriteLinesToFile
         File="test/test.txt"
